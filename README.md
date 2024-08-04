@@ -53,18 +53,18 @@ Create a new book.
   ```
 
 - **Response**:
-  \`\`\`json
+  ```json
   {
     "message": "Book created successfully"
   }
-  \`\`\`
+  ```
 
 ### GET /book
 
 Retrieve all books.
 
 - **Response**:
-  \`\`\`json
+  ```json
   [
     {
       "bookId": "some-uuid",
@@ -79,77 +79,77 @@ Retrieve all books.
       "publicationYear": "1949"
     }
   ]
-  \`\`\`
+  ```
 
 ### GET /book/:bookId
 
 Retrieve a book by ID.
 
 - **Response**:
-  \`\`\`json
+  ```json
   {
     "bookId": "some-uuid",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "publicationYear": "1925"
   }
-  \`\`\`
+  ```
 
 - **Error Response** (if not found):
-  \`\`\`json
+  ```json
   {
     "statusCode": 404,
     "message": "Book with ID some-uuid not found"
   }
-  \`\`\`
+  ```
 
 ### PUT /book/:bookId
 
 Update a book by ID.
 
 - **Request Body**:
-  \`\`\`json
+  ```json
   {
     "title": "The Great Gatsby (Updated)",
     "author": "F. Scott Fitzgerald",
     "publicationYear": 1925
   }
-  \`\`\`
+  ```
 
 - **Response**:
-  \`\`\`json
+  ```json
   {
     "bookId": "some-uuid",
     "title": "The Great Gatsby (Updated)",
     "author": "F. Scott Fitzgerald",
     "publicationYear": "1925"
   }
-  \`\`\`
+  ```
 
 - **Error Response** (if not found):
-  \`\`\`json
+  ```json
   {
     "statusCode": 404,
     "message": "Book with ID some-uuid not found"
   }
-  \`\`\`
+  ```
 
 ### DELETE /book/:bookId
 
 Delete a book by ID.
 
 - **Response**:
-  \`\`\`json
+  ```json
   {
     "message": "Book deleted successfully"
   }
-  \`\`\`
+  ```
 
 - **Error Response** (if not found):
-  \`\`\`json
+  ```json
   {
     "statusCode": 404,
     "message": "Book with ID some-uuid not found"
   }
-  \`\`\`
+  ```
 
